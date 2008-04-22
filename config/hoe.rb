@@ -1,16 +1,16 @@
 require 'lazyeval/version'
 
-AUTHOR = 'FIXME full name'  # can also be an array of Authors
-EMAIL = "FIXME email"
-DESCRIPTION = "description of gem"
-GEM_NAME = 'lazyeval' # what ppl will type to install your gem
-RUBYFORGE_PROJECT = 'lazyeval' # The unix name for your project
+AUTHOR = 'Vitaly Kushner'
+EMAIL = "vitaly at astrails dot com"
+DESCRIPTION = "A very simple lazy evaluation for Ruby"
+GEM_NAME = 'lazyeval'
+RUBYFORGE_PROJECT = 'lazyeval'
 HOMEPATH = "http://#{RUBYFORGE_PROJECT}.rubyforge.org"
 DOWNLOAD_PATH = "http://rubyforge.org/projects/#{RUBYFORGE_PROJECT}"
 
 @config_file = "~/.rubyforge/user-config.yml"
 @config = nil
-RUBYFORGE_USERNAME = "unknown"
+RUBYFORGE_USERNAME = "vitaly"
 def rubyforge_username
   unless @config
     begin
