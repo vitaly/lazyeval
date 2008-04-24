@@ -1,5 +1,27 @@
-$:.unshift File.dirname(__FILE__)
+class Object
+  def lazy(&block)
+    Lazy.new(self, &block)
+  end
+end
 
-module Lazyeval
-  
+class Lazy
+  undef_method(*(instance_methods - %w/__id__ __send__ respond_to? debugger/))
+
+  def initialize(obj, &block)
+    @obj, @block = obj, block
+  end
+
+  def method_missing(*args, &block)
+    unless @done
+      if !@args && !@block
+        @args, @block = args, @block
+        return self
+      end
+
+      @res = @args ?  @obj.send(*@args, &@block) : @block.call(@obj)
+      @done = true
+    end
+    
+    @res.send(*args, &block)
+  end
 end
