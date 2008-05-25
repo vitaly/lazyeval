@@ -1,4 +1,3 @@
-(in /Volumes/ast/playground/lazyeval)
 Gem::Specification.new do |s|
   s.name = %q{lazyeval}
   s.version = "0.0.2"
