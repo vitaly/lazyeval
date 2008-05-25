@@ -9,6 +9,7 @@ class Lazy
 
   def initialize(obj, &block)
     @obj, @block = obj, block
+    @args = @done = nil
   end
 
   def method_missing(*args, &block)
