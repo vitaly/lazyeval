@@ -20,17 +20,20 @@ accessed.
 	user_name = User.lazy { |user| user.find(:first).user_name } # no db access
 	puts user_name # db will be accessed here
 
-## Note on Patches/Pull Requests
+## Contributing
  
-* Fork the project.
-* Make your feature addition or bug fix.
-* Add tests for it. This is important so I don't break it in a future version
-  unintentionally.
-* Commit, do not mess with rakefile, version, or history.
-  (if you want to have your own version, that is fine but bump version in a
-  commit by itself I can ignore when I pull)
-* Send me a pull request. Bonus points for topic branches.
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Add tests for it. This is important so I don't break it in a future version
+   unintentionally.
+4. Commit your changes (`git commit -am 'Add some feature'`)
+5. Push to the branch (`git push origin my-new-feature`)
+6. Create new Pull Request
+
+> NOTE:  do not mess with rakefile, version, or history.  (if you want to have
+> your own version, that is fine but bump version in a commit by itself I can
+> ignore when I pull)
 
 ## Copyright
 
-Copyright (c) 2010 Vitaly Kushner. See LICENSE for details.
+Copyright (c) 2009-2013 Vitaly Kushner. See LICENSE.txt for details.

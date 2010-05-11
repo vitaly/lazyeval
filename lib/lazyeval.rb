@@ -24,7 +24,7 @@ if RUBY_VERSION < '1.9'
         @res = @args ?  @obj.send(*@args, &@block) : @block.call(@obj)
         @done = true
       end
-    
+
       @res.send(*args, &block)
     end
   end
@@ -48,7 +48,7 @@ else
         @res = @args ?  @obj.send(*@args, &@block) : @block.call(@obj)
         @done = true
       end
-    
+
       @res.send(*args, &block)
     end
   end
