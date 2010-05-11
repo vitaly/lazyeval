@@ -1,11 +1,7 @@
-require File.dirname(__FILE__) + '/test_helper.rb'
+require 'helper'
 
 class TestLazyeval < Test::Unit::TestCase
-
-  def setup
-  end
-  
-  def test_simple_lazy_call
+  should "call a simple method lazily" do
     src = [:a, :b]
     x = src.lazy.shift
     assert_equal [:a, :b], src
@@ -13,7 +9,7 @@ class TestLazyeval < Test::Unit::TestCase
     assert_equal [:b], src
   end
 
-  def test_block_lazy_call
+  should "call a block lazily" do
     src = [1, 2]
     x = src.lazy { |x| x.shift*3 }
 
