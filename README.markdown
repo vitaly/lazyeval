@@ -1,5 +1,8 @@
 # Lazyeval
 
+[![Build Status](https://travis-ci.org/vitaly/lazyeval.png)](https://travis-ci.org/vitaly/lazyeval)
+[![Code Climate](https://codeclimate.com/github/vitaly/lazyeval.png)](https://codeclimate.com/github/vitaly/lazyeval)
+
 Homepage: [http://github.com/vitaly/lazyeval/](http://github.com/vitaly/lazyeval/)
 
 This GEM allows to call methods lazily. The actual work will not be performed
