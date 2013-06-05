@@ -5,7 +5,7 @@ class TestLazyeval < Test::Unit::TestCase
     src = [:a, :b]
     x = src.lazy.shift
     assert_equal [:a, :b], src
-    assert_equal x, :a # :a.==(x) will fail, as x is a proxy. x.==(a) works
+    assert x === :a
     assert_equal [:b], src
   end
 
@@ -14,7 +14,7 @@ class TestLazyeval < Test::Unit::TestCase
     x = src.lazy { |x| x.shift*3 }
 
     assert_equal [1, 2], src
-    assert_equal x, 3
+    assert x === 3
     assert_equal [2], src
   end
 end
