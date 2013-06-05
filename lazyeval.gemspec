@@ -5,7 +5,7 @@ require 'lazyeval/version'
 
 Gem::Specification.new do |s|
   s.name          = "lazyeval"
-  s.version       = Lazy::VERSION
+  s.version       = Lazyeval::VERSION
   s.authors       = ["Vitaly Kushner"]
   s.email         = ["vitaly@astrails.com"]
   s.description   = %q{This GEM allows to call methods lazily. The actual
