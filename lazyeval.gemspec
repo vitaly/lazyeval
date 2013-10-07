@@ -23,6 +23,9 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency 'bundler', '~> 1.3'
   s.add_development_dependency 'rake'
-  s.add_development_dependency 'thoughtbot-shoulda'
-  s.add_development_dependency 'yard'
+  s.add_development_dependency 'minitest'
+  s.add_development_dependency 'guard'
+  s.add_development_dependency 'guard-minitest'
+  s.add_development_dependency 'terminal-notifier-guard'
+  s.add_development_dependency 'debugger'
 end
