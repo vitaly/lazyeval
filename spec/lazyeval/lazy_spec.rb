@@ -9,6 +9,17 @@ describe Lazyeval::Lazy do
     src.must_equal [:b]
   end
 
+  it 'should call method with args and block lazily' do
+    i = 0
+    sum = [1, 2].lazy.inject(3) do |res, x|
+      i += 1
+      res + x
+    end
+    i.must_equal 0
+    sum.must_equal 6
+    i.must_equal 2
+  end
+
   it "should call a block lazily" do
     src = [1, 2]
     x = src.lazy { |x| x.shift*3 }

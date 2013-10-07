@@ -10,10 +10,12 @@ module Lazyeval
     def method_missing(*args, &block)
       unless @done
         if !@args && !@block
-          @args, @block = args, @block
+          # called 1st time, store the args and the block
+          @args, @block = args, block
           return self
         end
 
+        # called 2nd time, execute the lazy call
         @res = @args ?  @obj.send(*@args, &@block) : @block.call(@obj)
         @done = true
       end
