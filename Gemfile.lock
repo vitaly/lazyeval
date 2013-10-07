@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    lazyeval (0.0.3)
+    lazyeval (0.0.4)
 
 GEM
   remote: https://rubygems.org/
